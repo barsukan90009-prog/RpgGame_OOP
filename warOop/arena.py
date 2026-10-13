@@ -1,3 +1,5 @@
+#Удалить к хуям
+
 # class Arena:
 #     def __init__(self, fighter1, fighter2):            #объяснить различие и привести пример вызова функции и ее объявления
 #         self.fighter1 = fighter1
