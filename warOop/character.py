@@ -1,9 +1,16 @@
 class Character():
-    def __init__(self, name: str, damage: int, health: int, weapon: str, typeAttack: str):
+    def __init__(
+        self,
+        name: str, 
+        damage: int, 
+        health: int, 
+        weapon: str, 
+        type_attack: str
+    ):
         self.name = name
         self.damage = damage
         self.health = health
         self.weapon = weapon
-        self.typeAttack = typeAttack
-        self.isBusy = False
+        self.type_attack = type_attack
+    
 

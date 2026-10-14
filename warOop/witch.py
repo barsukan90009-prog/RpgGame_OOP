@@ -1,7 +1,15 @@
 from rangedFighter import RangedFighter
 
-#     Замечания как и в классе Archer
 class Witch(RangedFighter):
-    def __init__(self, name: str = "Рыжая шлюха", damage: int = 70, health: int = 180, weapon: str = "Скипетр Лича", typeAttack: str = "Пронзание магией крови", envasion: int = 50, blood: int = 50):
-        super().__init__(name, damage, health, weapon, typeAttack, envasion)
+    def __init__(
+        self, 
+        name: str, 
+        damage: int = 70, 
+        health: int = 180, 
+        weapon: str = "Скипетр Лича", 
+        type_attack: str = "Выпускает магию крови", 
+        envasion: int = 40, 
+        blood: int = 50
+    ):
+        super().__init__(name, damage, health, weapon, type_attack, envasion)
         self.blood = blood
