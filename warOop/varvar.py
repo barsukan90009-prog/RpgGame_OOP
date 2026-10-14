@@ -9,7 +9,7 @@ class Varvar(NearFighter):
         weapon: str = "Топоры мясника", 
         type_attack: str = "Бьет двумя топорами", 
         armour: int = 30, 
-        double_attack: bool = True
+        double_attack: int = 60
     ):
         super().__init__(name, damage, health, weapon, type_attack, armour)
         self.double_attack = double_attack

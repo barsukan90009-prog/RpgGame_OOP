@@ -27,21 +27,36 @@ class Arena2:
         # c учетом его брони(если таковой у объекта нет то вернется 0) и выводит статус боя
         armour = getattr(defender, "armour", 0)
         final_damage = max(0, attacker.damage - armour)
-        # max = 0 сравнивает с итоговым значением с 0 и выбирает наибольшее
-        defender.health = max(0, defender.health - final_damage)
+        
 
             # Args:
                     # attacker: Объект атакующего бойца, который наносит удар.
                     # defender: Объект защищающегося бойца, который получает урон.
                     
-        print(
-            f"{attacker.name} достает из кармана {attacker.weapon}"
-            f" {attacker.type_attack} в {defender.name}"
-            f"\n{defender.name} получает {final_damage} урона,"
-            f" с учетом брони {armour}\n"
-            f"\nОсталось здоровья: {defender.health}\n"
-        )
+        double_attack = getattr(attacker, "double_attack", 0)
+        if double_attack > 0 and random.randint(1, 100) <= double_attack:
+            final_damage *= 2
+            print(
+                f"{attacker.name} достает из кармана {attacker.weapon}\n"
+                f"{attacker.type_attack} в {defender.name}\n\n"
+                f"{defender.name} получает {final_damage} урона,\n"
+                f"с учетом брони {armour}\n"
+                f"нихуя себе двойная атака шанс был: {double_attack}%\n"
+                f"с учетом брони {armour}\n"
+            )
+        else:
+            print(
+                f"{attacker.name} достает из кармана {attacker.weapon}\n"
+                f"{attacker.type_attack} в {defender.name}\n\n"
+                f"{defender.name} получает {final_damage} урона\n"
+                f"с учетом брони {armour}\n"
+            )
 
+        # 4. обновление здоровья (один раз на весь метод)
+        defender.health = max(0, defender.health - final_damage)
+        print(f"Осталось здоровья: {defender.health}\n")
+
+        
     # Метод принимающий на вход 2 аргумента
     # Метод проверяет здоровье защищающегося бойца, при выполнении одного из условий
     # либо завершает чьей-то победой либо продолжает.       
