@@ -3,7 +3,7 @@ from nearFighter import NearFighter
 class Assasin(NearFighter):
       def __init__(
           self,
-          name: str,
+          name: str,    
           damage: int = 50,
           health: int = 130,
           weapon: str = "Клинок пацанский",
