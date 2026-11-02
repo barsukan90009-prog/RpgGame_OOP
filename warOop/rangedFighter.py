@@ -1,14 +1,14 @@
 from character import Character
-from weapon import Weapon
 
 class RangedFighter(Character):
     def __init__(
         self, 
         name: str, 
-        base_damage: int, 
+        damage: int, 
         health: int,
-        weapon: Weapon, 
+        weapon: str, 
+        type_attack: str, 
         envasion: int
     ):
-        super().__init__(name, base_damage, health, weapon)
+        super().__init__(name, damage, health, weapon, type_attack)
         self.envasion = envasion
