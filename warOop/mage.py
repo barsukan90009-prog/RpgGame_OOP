@@ -1,15 +1,15 @@
 from rangedFighter import RangedFighter
+from weapon import Weapon
 
 class Mage(RangedFighter):
     def __init__(
         self, 
         name: str,  
-        damage: int = 70,
+        base_damage: int = 10,
         health: int = 100, 
-        weapon: str = "Посох Мерлина",
-        type_attack: str = "Выпускает молнию при взмахе посоха", 
+        weapon: Weapon = None, 
         envasion: int = 30, 
         mana: int = 50
     ):
-            super().__init__(name, damage, health, weapon, type_attack, envasion)
+            super().__init__(name, base_damage, health, weapon, envasion)
             self.mana = mana

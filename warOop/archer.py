@@ -1,15 +1,15 @@
 from rangedFighter import RangedFighter
+from weapon import Weapon
 
 class Archer(RangedFighter):
     def __init__(
         self, 
         name: str, 
-        damage: int = 40, 
+        base_damage: int = 15, 
         health: int = 150, 
-        weapon: str = "Лук охотника",
-        type_attack: str = "Натягивает титиву и запускает стрелу", #тЕтиву, но название свойства хуевое. Это не тип атаки, а описание
+        weapon: Weapon = None,
         envasion: int = 30, 
         ammunation: int = 5
     ):
-        super().__init__(name, damage, health, weapon, type_attack, envasion)
+        super().__init__(name, base_damage, health, weapon, envasion)
         self.ammunation = ammunation

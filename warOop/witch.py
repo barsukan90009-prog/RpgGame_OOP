@@ -1,15 +1,15 @@
 from rangedFighter import RangedFighter
+from weapon import Weapon
 
 class Witch(RangedFighter):
     def __init__(
         self, 
         name: str, 
-        damage: int = 70, 
+        base_damage: int = 10, 
         health: int = 180, 
-        weapon: str = "Скипетр Лича", 
-        type_attack: str = "Выпускает магию крови", 
+        weapon: Weapon = None,  
         envasion: int = 40, 
         blood: int = 50
     ):
-        super().__init__(name, damage, health, weapon, type_attack, envasion)
+        super().__init__(name, base_damage, health, weapon, envasion)
         self.blood = blood
