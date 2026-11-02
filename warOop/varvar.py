@@ -1,15 +1,14 @@
 from nearFighter import NearFighter
+from weapon import Weapon
 
-#     Замечания как и в классе Archer
 class Varvar(NearFighter):
     def __init__(
         self, name: str, 
-        damage: int = 50, 
+        base_damage: int = 30, 
         health: int = 200, 
-        weapon: str = "Топоры мясника", 
-        type_attack: str = "Бьет двумя топорами", 
+        weapon: Weapon = None,  
         armour: int = 30, 
         double_attack: bool = True
     ):
-        super().__init__(name, damage, health, weapon, type_attack, armour)
+        super().__init__(name, base_damage, health, weapon, armour)
         self.double_attack = double_attack
