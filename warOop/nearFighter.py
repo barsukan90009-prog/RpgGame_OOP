@@ -1,14 +1,14 @@
 from character import Character
+from weapon import Weapon
 
 class NearFighter(Character):
     def __init__(
         self, 
         name: str, 
-        damage: int, 
+        base_damage: int, 
         health: int, 
-        weapon: str, 
-        type_attack: str, 
+        weapon: Weapon,  
         armour: int
     ):
-        super().__init__(name, damage, health, weapon, type_attack)
+        super().__init__(name, base_damage, health, weapon)
         self.armour = armour
