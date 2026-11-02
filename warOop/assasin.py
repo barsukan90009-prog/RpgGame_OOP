@@ -1,17 +1,17 @@
 from nearFighter import NearFighter
+from weapon import Weapon
 
 class Assasin(NearFighter):
       def __init__(
           self,
           name: str,    
-          damage: int = 50,
+          base_damage: int = 20,
           health: int = 130,
-          weapon: str = "Клинок пацанский",
-          type_attack: str = "Бьет в крысу",
+          weapon: Weapon = None,
           armour: int = 20, 
           poison_attack: bool = True, 
           damage_poison: int = 40
       ):
-         super().__init__(name, damage, health, weapon, type_attack, armour)
+         super().__init__(name, base_damage, health, weapon, armour)
          self.poison_attack = poison_attack
          self.damage_poison = damage_poison
