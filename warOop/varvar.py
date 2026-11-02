@@ -8,7 +8,7 @@ class Varvar(NearFighter):
         health: int = 200, 
         weapon: Weapon = None,  
         armour: int = 30, 
-        double_attack: bool = True
+        double_attack: int = 60
     ):
         super().__init__(name, base_damage, health, weapon, armour)
         self.double_attack = double_attack
